@@ -5,25 +5,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ltts.ConnectedBoatSimulatorUI.model.Main;
-import com.ltts.ConnectedBoatSimulatorUI.repository.MainRepository;
+import com.ltts.ConnectedBoatSimulatorUI.model.BoatLocation;
+import com.ltts.ConnectedBoatSimulatorUI.repository.BoatLocationRepository;
 
 @Service
-public class MainService {
+public class BoatLocationService {
 
 	@Autowired
-	private MainRepository repo;
+	private BoatLocationRepository repo;
 	
-	public List<Main> listAll(){
+	public List<BoatLocation> listAll(){
 		return repo.findAll();
 	}
-	public void save(Main boat) {
+	public void save(BoatLocation boat) {
 		repo.save(boat);
 	}
-	public Main get(int id) {
+	public BoatLocation get(int id) {
 		return repo.findById(id).get();
 	}
-	public Main getCurrentLocation(Main m) {
+	public BoatLocation getCurrentLocation(BoatLocation m) {
 		//return repo.findByLocationId(id).get();
 		  
 		 return m;

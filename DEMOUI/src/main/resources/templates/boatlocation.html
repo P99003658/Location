@@ -30,7 +30,7 @@ var lat=0,lng=0;
                     showMap();
                    
 	function showMap() {
-                    var targeturl="/boatlocation/"+'XYZ89898B707'
+                    var targeturl="/location/"+'XYZ89898B707'
                     $.get( targeturl, function( data ) {
                     console.log(data);
                     lat=data.latitude;

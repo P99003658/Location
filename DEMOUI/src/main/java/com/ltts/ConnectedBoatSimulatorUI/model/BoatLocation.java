@@ -7,10 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
-
 @Entity
-public class Main {
+public class BoatLocation {
 	
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -22,7 +20,7 @@ public class Main {
 	private String heading;
     private String timestamp;
 	
-	public Main() {
+	public BoatLocation() {
 		super();
 	}
 
